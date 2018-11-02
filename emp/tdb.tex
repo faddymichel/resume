@@ -4,5 +4,34 @@
 Software Engineer at The Daily Beast / Newsweek
 }
 }
-Adobe CQ5, Java SE, Apache Solr, JavaScript, JQuery, HTML, DustJS, CSS, Less and 
-Google Analytics.
+\paragraph {Developed a toolbar for old Newsweek Editions deployed to Adobe Content View on Kindles and Android devices:}
+ The toolbar gives the reader the ability to increase and decrease text size and save the last size using HTML5 storage,
+scroll to the top of the page and share on the top 3 social networks.
+
+ This project was challenging in the sense that it was developed to support old Android devices (2.3) which do not
+support various CSS properties, especially CSS3 properties and the fixed positioning do not work properly.
+
+\paragraph{Contributed on the redesign of Newsweek, The Daily Beast and Women in the World (Desktop and mobile):}
+\begin {itemize}
+\item Modifying and sometimes reimplementing the JSON content API which is used then by the Dust templating engine
+to render content.
+\item Created various UI components to be reused on different pages all over the sites. To achieve this, various front-end
+technologies and techniques were used. DustJS to create templates, Less for styling, Javascript and various in-house
+and third-party libraries to build dynamic features.
+\item Used Google Publisher Tags, Double-click for Publishers and Google AdSense to deliver Ads.
+\item Used Adobe SiteCatalyst, Dax and Google Analytics for tracking.
+\end {itemize}
+
+\paragraph {Developed a Java Service that compiles Less files on the server-side:}
+This is done by checking for updated and newly created less files in JCR, using OSGI events, and then compile them
+using Mozilla Rhino. And finally save the CSS output in the same directory where each less file is placed.
+To optimize the performance of the service, used the multi-threading features provided by Java.
+
+\paragraph{Developed a bundle that generates the printed version of Newsweek editions:}
+The front-end templates where created using XSL-FO.
+A Java servlet with a xsl selector and PDF extension outputs the pdf version of the requested page.
+The PDF generation is done using a Java service that uses Apache FOP.
+
+\paragraph {Migrated the legacy advertising library to use Google Publisher Tags:}
+Created a JQuery plugin that is responsible for injecting the ad inside the selected elements.
+Also, created a Javascript library that uses Google Publisher Tags for ad calls.
