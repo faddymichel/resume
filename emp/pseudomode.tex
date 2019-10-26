@@ -3,14 +3,14 @@ Founder / Leader / Software Engineer at Pseudomode}}
 Founded Workshop for making not only \uppercase{accessible} but \uppercase{usable} Technologies.
 \paragraph{Bostagy:}
 A WebSocket server for Shell using NodeJS.
-It exposes a NodeJS module and Shell command that run a WebSocket server at the specified address and port;
+It exposes a NodeJS module and Shell command that runs a WebSocket server at the specified address and port;
 connecting the client via WebSocket protocol to standard streams of the Bostagy process.
 It implements the WebSocket protocol on top of the http core module.
 \paragraph{Maitre:}
 A Web server for Shell using NodeJS.
 It exposes a Shell command that runs a Web server on the specified address and port.
 When a client connects via WebSocket protocol or sends an HTTP request,
-Maitre searches for either a wsrc file or a file whose name is starts with the HTTP verb (get, post, put, etc.) and the rc suffix.
+Maitre searches for either a wsrc file or a file whose name starts with the HTTP verb (get, post, put, etc.) and the rc suffix.
 If the file is found successfully, Maitre runs the commands found in this file in a child process and connects the client to its standard streams.
 \paragraph{Scenarist:}
 A Scenario-based UI framework.
