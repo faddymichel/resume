@@ -1,0 +1,46 @@
+\subsubsection{\textsubscript{\uppercase{\texttt{Oct 2018--Present}}\\
+Founder / Leader / Software Engineer at Teatro13}}
+Founded Workshop for making not only \uppercase{accessible} but \uppercase{usable} Technologies.
+\paragraph{Teatro: (https://github.com/teatro13/teatro)}
+It all starts from the Playwriter; who must have programming skills along with creativity.
+The Playwriter writes different Scenarios of a Play to be hosted on Teatro so that each Scenario focuses on a specific type of Participants.
+A Scenario is a JavaScript function running on the NodeJS runtime with a Participant and a Ticket passed as parameters.
+After writing and hosting Scenarios, Tickets can be issued for a Scenario where Ticket is the Accessibility method for a Participant to participate in a Play.
+Participants
+(Clients which can be a Web Browser such as Chrome and Firefox, Mobile App running on iOS or Android, etc)
+connect to Teatro (Server) through the WebSocket protocol of communication
+(Read about WebSocket on [Wikipedia](https://en.wikipedia.org/wiki/WebSocket)).
+Since WebSocket opens a separate channel between the Server and each Client, making it possible for both sides to send/receive data to/from the other side at any time,
+a live experience can be built step-by-step between the Participant and the playing Scenario.
+This way, at each step, the Participant can translate the received data in a format
+(audible, graphical, etc.)
+that suits their physical capabilities and the situation they are facing.
+This provides a smoother User-Experience than the Apps of nowadays since they depend on loading a lot of User-Interface components all together at once,
+providing a crowded User-Experience,
+which makes it hard to translate all of these components into different formats in a smooth way
+(Apps made by Google, Microsoft, Apple, Facebook, Amazon, LinkedIn and all of their Blind followers are obvious examples of such a crowded and poor User-Experience).
+In the end, Teatro aims to move a step forward towards Equality in Usability that is believed to start from the backend before the frontend.
+\paragraph{Scenarist: (https://github.com/teatro13/scenarist)}
+A Scenario-based UI framework for web browsers.
+A Scenarist application consists of scenarios;
+where each scenario is built from scenes.
+A scene is an ES6 native module exporting setting object, establishment function and characters object.
+Setting objects exported by all scenes of a scenario are appended to each other forming a single setting object
+shared between all scenes of a scenario.
+Establishment function of each scene is run after loading scenes
+with thisArg (this keyword) set to the setting object of the scenario.
+Characters object owns two properties; events and action.
+Events is an array of scene names
+where the characters' action is executed whenever any of these events is triggered.
+The display property of the scenarist sets which scenario is currently in effect.
+Finally, an event is triggered by calling the play function of a scenarist
+passed with the scene name (event), character name and an optional parameter action
+representing the value which the character should be set to.
+\paragraph{Oscilla: (https://github.com/teatro13/oscilla)}
+A Sound Synthesizer for web browsers.
+It uses Scenarist to build the UI and Web Audio API for it's logic.
+In each scenario of Oscilla,
+ASCII codes are considered as the scenario characters.
+For instance, when on the Note scenario,
+the 's' ASCII code triggers the character responsible for playing the C pitch,
+and 'g' triggers the character responsible for decrementing the octave, and so forth.
